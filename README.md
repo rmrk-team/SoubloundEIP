@@ -25,11 +25,20 @@ This proposal is designed in a way to be as minimal as possible in order to be c
 
 This EIP introduces new utilities for [EIP-721](./eip-721.md) based tokens in the following areas:
 
-- [Foo](#foo)
+- [Verifiable attribution](#verifiable-attribution)
+- [Immutable properties](#immutable-properties)
 
-### Foo
+### Verifiable attribution
 
-The ability to prevent the tokens to be transferred
+Personal achievements can be represented by non-fungible tokens. These tokens can be used to represent a wide range of accomplishments, including scientific advancements, philanthropic endeavors, athletic achievements, and more. However, if these achievement-indicating NFTs can be easily transferred, their authenticity and trustworthiness can be called into question. By binding the NFT to a specific account, it can be ensured that the account owning the NFT is the one that actually achieved the corresponding accomplishment. This creates a secure and verifiable record of personal achievements that can be easily accessed and recognized by others in the network. The ability to verify attribution helps to establish the credibility and value of the achievement-indicating NFT, making it a valuable asset that can be used as a recognition of the holder's accomplishments.
+
+### Immutable properties
+
+NFT properties are a critical aspect of non-fungible tokens, serving to differentiate them from one another and establish their scarcity. Centralized control of NFT properties by the issuer, however, can undermine the uniqueness of these properties.
+
+By tying NFTs to specific properties, the original owner is ensured that the NFT will always retain these properties and its uniqueness.
+
+In a blockchain game that employs soulbound NFTs to represent skills or abilities, each skill would be a unique and permanent asset tied to a specific player or token. This would ensure that players retain ownership of the skills they have earned and prevent them from being traded or sold to other players. This can increase the perceived value of these skills, enhancing the player experience by allowing for greater customization and personalization of characters.
 
 ## Specification
 
