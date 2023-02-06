@@ -54,7 +54,7 @@ pragma solidity ^0.8.16;
 interface IERCx is IERC165 {
     /**
      * @notice Used to check whether the given token is soulbound or not.
-     * @dev If this function returns `true`, the transfer of the token MUST be made impossible
+     * @dev If this function returns `true`, the transfer of the token MUST revert execution
      * @param tokenId ID of the token being checked
      * @return Boolean value indicating whether the given token is soulbound
      */
