@@ -66,13 +66,11 @@ interface IERCx is IERC165 {
 
 Designing the proposal, we considered the following questions:
 
-1. **Should we propose another Soulbound NFT proposal even if there are already existing ones?**\
-   This proposal aims to provide the minimum necessary specification, as none of the existing proposals have presented the minimal required interface for the NFTs to be soulbound.
-2. **How does this proposal compare to the other proposals?**\
-   This proposal aims to provide the minimum necessary methods for the implementation of soulbound NFTs. Unlike other proposals that address the same issue, this proposal requires fewer methods in its specification, thus providing a more streamlined solution.
-3. **Why is there no event marking the token as Soulbound in this interface?**\
+1. **Should we propose another Soulbound NFT proposal given the existence of existing ones, some even final, and how does this proposal compare to them?**\
+   This proposal aims to provide the minimum necessary specification for the implementation of soulbound NFTs, we feel none of the existing proposals have presented the minimal required interface. Unlike other proposals that address the same issue, this proposal requires fewer methods in its specification, providing a more streamlined solution.
+2. **Why is there no event marking the token as Soulbound in this interface?**\
    The token can become soulbound either at its creation, after being marked as soulbound, or after a certain condition is met. This means that some cases of tokens becoming soulbound cannot emit an event, such as if the token becoming soulbound is determined by a block number. Requiring an event to be emitted upon the token becoming soulbound is not feasible in such cases.
-4. **Should the soulbound state management function be included in this proposal?**\
+3. **Should the soulbound state management function be included in this proposal?**\
    A function that marks a token as soulbound or releases the binding is referred to as the soulbound management function. To maintain the objective of designing an agnostic soulbound proposal, we have decided not to specify the soulbound management function. This allows for a variety of custom implementations that require the tokens to be non-transferable.
 
 ## Backwards Compatibility
