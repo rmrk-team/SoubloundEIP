@@ -54,6 +54,7 @@ pragma solidity ^0.8.16;
 interface IERCx is IERC165 {
     /**
      * @notice Used to check whether the given token is soulbound or not.
+     * @dev If this function returns `true`, the transfer of the token MUST be made impossible
      * @param tokenId ID of the token being checked
      * @return Boolean value indicating whether the given token is soulbound
      */
@@ -64,6 +65,15 @@ interface IERCx is IERC165 {
 ## Rationale
 
 Designing the proposal, we considered the following questions:
+
+1. **Should we propose another Soulbound NFT proposal even if there are already existing ones?**\
+   This proposal aims to provide the minimum necessary specification, as none of the existing proposals have presented the minimal required interface for the NFTs to be soulbound.
+2. **How does this proposal compare to the other proposals?**\
+   This proposal aims to provide the minimum necessary methods for the implementation of soulbound NFTs. Unlike other proposals that address the same issue, this proposal requires fewer methods in its specification, thus providing a more streamlined solution.
+3. **Why is there no event marking the token as Soulbound in this interface?**\
+   The token can become soulbound either at its creation, after being marked as soulbound, or after a certain condition is met. This means that some cases of tokens becoming soulbound cannot emit an event, such as if the token becoming soulbound is determined by a block number. Requiring an event to be emitted upon the token becoming soulbound is not feasible in such cases.
+4. **Should the soulbound state management function be included in this proposal?**\
+   A function that marks a token as soulbound or releases the binding is referred to as the soulbound management function. To maintain the objective of designing an agnostic soulbound proposal, we have decided not to specify the soulbound management function. This allows for a variety of custom implementations that require the tokens to be non-transferable.
 
 ## Backwards Compatibility
 
