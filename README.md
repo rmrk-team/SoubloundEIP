@@ -3,7 +3,7 @@ eip: x
 title: Minimalistic Souldbound interface for NFTs
 description: An interface for Soulbound Non-Fungible Tokens extension allowing for tokens to be non-transferrable.
 author: Bruno Škvorc (@Swader), Francesco Sullo(@sullof), Steven Pineda (@steven2308), Stevan Bogosavljevic (@stevyhacker), Jan Turk (@ThunderDeliverer)
-discussions-to: x
+discussions-to: https://ethereum-magicians.org/t/minimalistic-transferable-interface/12517
 status: Draft
 type: Standards Track
 category: ERC
